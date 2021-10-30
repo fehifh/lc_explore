@@ -1,10 +1,11 @@
 package stack;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 class MinStack {
-    private List<Integer> data;
+    private ArrayList<Integer> data;
     private int min;
     public MinStack() {
         data = new ArrayList<>();
@@ -16,18 +17,28 @@ class MinStack {
 
     public void pop() {
         assert data!=null;
-        data.remove(1);
+        data.remove(data.size()-1);
     }
 
     public int top() {
         assert data!=null;
-        data.get(1);
+        return data.get(data.size()-1);
     }
 
     public int getMin() {
         assert data!=null;
-        data.get(
-        )
+        int min = data.get(0);
+        for(int i=0;i<data.size();i++){
+            if(data.get(i)<min) min=data.get(i);
+        }
+        return min;
+    }
+
+    public void print(){
+        for(int i=0;i<data.size();i++){
+            System.out.println("The stack is:");
+            System.out.println(data.get(i));
+        }
     }
 }
 
