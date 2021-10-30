@@ -1,6 +1,6 @@
 package linkedlist;
 
-public class test {
+public class MyLinkedListMain {
     public static void main(String[] args) {
         MyLinkedList myLinkedList= new MyLinkedList();
         myLinkedList.addAtHead(1);

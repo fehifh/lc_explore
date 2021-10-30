@@ -1,7 +1,7 @@
 package stack;
 
 
-public class Main {
+public class MyStackMain {
     public static void main(String[] args) {
         MyStack s = new MyStack();
         s.push(1);

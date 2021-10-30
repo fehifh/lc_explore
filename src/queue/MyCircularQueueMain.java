@@ -1,7 +1,7 @@
 package queue;
 
 
-public class Main {
+public class MyCircularQueueMain {
     public static void main(String[] args) {
 //        MyQueue q = new MyQueue();
 //        q.enQueue(5);

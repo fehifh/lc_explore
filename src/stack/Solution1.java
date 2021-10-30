@@ -2,7 +2,7 @@ package stack;
 
 import java.util.Stack;
 
-class Solution {
+class Solution1 {
     public static boolean isValid(String s) {
 
 

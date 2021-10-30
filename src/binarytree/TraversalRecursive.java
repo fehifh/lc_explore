@@ -13,7 +13,7 @@ import java.util.Stack;
  *     binarytree.TreeNode(int x) { val = x; }
  * }
  */
-class Solution {
+class TraversalRecursive {
     public static List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> answer = new ArrayList<>();
         Stack<TreeNode> s = new Stack<TreeNode>();
