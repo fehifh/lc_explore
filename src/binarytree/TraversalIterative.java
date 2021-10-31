@@ -37,10 +37,11 @@ class TraversalIterative {
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> answer = new ArrayList<>();
         Stack<TreeNode> s = new Stack<TreeNode>();
-        TreeNode cur = s.pop();
-        if (root != null) {
-            s.push(root);
+        TreeNode cur ;
+        if (root != null ) {
+            s.push(root.right==null?root:root.right);
         }
+
         while (!s.empty()) {
             cur = s.pop();
             answer.add(cur.val);            // visit the root
