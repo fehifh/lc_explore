@@ -1,12 +1,15 @@
-package graph;
+package disjointSet;
 
-class UnionFind2 {
+public class UnionByRank {
     private int[] root;
+    private int[] rank;
 
-    public UnionFind2(int size) {
+    public UnionByRank(int size) {
         root = new int[size];
+        rank = new int[size];
         for (int i = 0; i < size; i++) {
             root[i] = i;
+            rank[i] = 1;
         }
     }
 
@@ -21,7 +24,14 @@ class UnionFind2 {
         int rootX = find(x);
         int rootY = find(y);
         if (rootX != rootY) {
-            root[rootY] = rootX;
+            if (rank[rootX] > rank[rootY]) {
+                root[rootY] = rootX;
+            } else if (rank[rootX] < rank[rootY]) {
+                root[rootX] = rootY;
+            } else {
+                root[rootY] = rootX;
+                rank[rootX] += 1;
+            }
         }
     }
 

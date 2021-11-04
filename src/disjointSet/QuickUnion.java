@@ -1,9 +1,9 @@
-package graph;
+package disjointSet;
 
-class UnionFind {
+class QuickUnion {
     private int[] root;
 
-    public UnionFind(int size) {
+    public QuickUnion(int size) {
         root = new int[size];
         for (int i = 0; i < size; i++) {
             root[i] = i;
@@ -11,18 +11,17 @@ class UnionFind {
     }
 
     public int find(int x) {
-        return root[x];
+        while (x != root[x]) {
+            x = root[x];
+        }
+        return x;
     }
 
     public void union(int x, int y) {
         int rootX = find(x);
         int rootY = find(y);
         if (rootX != rootY) {
-            for (int i = 0; i < root.length; i++) {
-                if (root[i] == rootY) {
-                    root[i] = rootX;
-                }
-            }
+            root[rootY] = rootX;
         }
     }
 

@@ -1,4 +1,4 @@
-package linkedlist;
+package linkedList;
 
 public class MyLinkedList {
     //MyLinkedList() Initializes the MyLinkedList object.

@@ -1,8 +1,8 @@
-package graph;
+package disjointSet;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        UnionFind uf = new UnionFind(10);
+        QuickFind uf = new QuickFind(10);
         // 1-2-5-6-7 3-8-9 4
         uf.union(1, 2);
         uf.union(2, 5);
@@ -17,7 +17,7 @@ public class App {
         uf.union(9, 4);
         System.out.println(uf.connected(4, 9)); // true
 
-        UnionFind2 uf2 = new UnionFind2(10);
+        QuickUnion uf2 = new QuickUnion(10);
         // 1-2-5-6-7 3-8-9 4
         uf2.union(1, 2);
         uf2.union(2, 5);
