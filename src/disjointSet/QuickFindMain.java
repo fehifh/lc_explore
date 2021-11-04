@@ -1,6 +1,6 @@
 package disjointSet;
 
-public class App {
+public class QuickFindMain {
     public static void main(String[] args) throws Exception {
         QuickFind uf = new QuickFind(10);
         // 1-2-5-6-7 3-8-9 4
@@ -17,19 +17,6 @@ public class App {
         uf.union(9, 4);
         System.out.println(uf.connected(4, 9)); // true
 
-        QuickUnion uf2 = new QuickUnion(10);
-        // 1-2-5-6-7 3-8-9 4
-        uf2.union(1, 2);
-        uf2.union(2, 5);
-        uf2.union(5, 6);
-        uf2.union(6, 7);
-        uf2.union(3, 8);
-        uf2.union(8, 9);
-        System.out.println(uf.connected(1, 5)); // true
-        System.out.println(uf.connected(5, 7)); // true
-        System.out.println(uf.connected(4, 9)); // false
-        // 1-2-5-6-7 3-8-9-4
-        uf2.union(9, 4);
-        System.out.println(uf.connected(4, 9)); // true
+
     }
 }
