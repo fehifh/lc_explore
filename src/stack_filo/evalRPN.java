@@ -1,8 +1,8 @@
-package stack;
+package stack_filo;
 
 import java.util.Stack;
 
-public class Solution3 {
+public class evalRPN {
     public static int evalRPN(String[] tokens) {
         Stack<String> s = new Stack<>();
         for(String t: tokens){

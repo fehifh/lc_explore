@@ -1,8 +1,8 @@
-package stack;
+package stack_filo;
 
 import java.util.Stack;
 
-public class Solution2 {
+public class dailyTemperatures {
     public static int[] dailyTemperatures(int[] temperatures) {
         int n=temperatures.length;
         int[] ans= new int[n];

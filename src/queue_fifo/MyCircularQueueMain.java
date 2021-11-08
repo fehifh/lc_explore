@@ -1,4 +1,4 @@
-package queue;
+package queue_fifo;
 
 
 public class MyCircularQueueMain {

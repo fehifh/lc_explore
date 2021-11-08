@@ -1,8 +1,6 @@
-package stack;
+package stack_filo;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 
 class MinStack {
     private ArrayList<Integer> data;

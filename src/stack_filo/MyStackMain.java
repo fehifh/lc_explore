@@ -1,4 +1,4 @@
-package stack;
+package stack_filo;
 
 
 public class MyStackMain {

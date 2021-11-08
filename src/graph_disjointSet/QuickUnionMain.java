@@ -1,8 +1,8 @@
-package disjointSet;
+package graph_disjointSet;
 
-public class PathCompressOptMain {
+public class QuickUnionMain {
     public static void main(String[] args){
-        PathCompressOpt uf = new PathCompressOpt(10);
+        QuickUnion uf = new QuickUnion(10);
         // 1-2-5-6-7 3-8-9 4
         uf.union(1, 2);
         uf.union(2, 5);

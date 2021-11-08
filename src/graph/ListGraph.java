@@ -2,7 +2,7 @@ package graph;
 
 import java.util.LinkedList;
 
-public class AdjListGraph<VL, EL> implements MyGraph<VL, EL>{
+public class ListGraph<VL, EL> implements WGraph<VL, EL> {
     class Vertex{
         VL label;
         LinkedList<Edge> outgoing = new LinkedList<>();
@@ -29,7 +29,7 @@ public class AdjListGraph<VL, EL> implements MyGraph<VL, EL>{
     LinkedList<Vertex> vertices;
 
     /** Constructor: An empty adjacency list */
-    public AdjListGraph() {
+    public ListGraph() {
         vertices = new LinkedList<>();
     }
 
@@ -145,7 +145,7 @@ public class AdjListGraph<VL, EL> implements MyGraph<VL, EL>{
     }
 
     public static void main(String[] args){
-        MyGraph<String, Integer> g = new AdjListGraph<>();
+        WGraph<String, Integer> g = new ListGraph<>();
         g.addVertex("a");
         g.addVertex("b");
         g.addVertex("c");

@@ -1,6 +1,6 @@
 package graph;
 
-public interface MyGraph <VL,EL>{
+public interface WGraph<VL,EL>{
     /* vertex operations */
 
     /** The number of vertices in the graph. */

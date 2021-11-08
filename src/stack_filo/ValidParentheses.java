@@ -1,8 +1,8 @@
-package stack;
+package stack_filo;
 
 import java.util.Stack;
 
-class Solution1 {
+class ValidParentheses {
     public static boolean isValid(String s) {
 
 

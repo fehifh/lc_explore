@@ -1,9 +1,10 @@
-package disjointSet;
+package graph_disjointSet;
 
-class QuickUnion {
+
+class PathCompressOpt {
     private int[] root;
 
-    public QuickUnion(int size) {
+    public PathCompressOpt(int size) {
         root = new int[size];
         for (int i = 0; i < size; i++) {
             root[i] = i;
@@ -11,10 +12,10 @@ class QuickUnion {
     }
 
     public int find(int x) {
-        while (x != root[x]) {
-            x = root[x];
+        if (x == root[x]) {
+            return x;
         }
-        return x;
+        return root[x] = find(root[x]);
     }
 
     public void union(int x, int y) {

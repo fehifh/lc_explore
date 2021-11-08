@@ -1,4 +1,4 @@
-package stack;
+package stack_filo;
 
 
 import java.util.Stack;
