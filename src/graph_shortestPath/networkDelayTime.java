@@ -1,4 +1,4 @@
-package graph_dijkstra;
+package graph_shortestPath;
 
 import java.util.*;
 
@@ -15,7 +15,7 @@ public class networkDelayTime {
         // initialization
         dSF.put(k,0);
         bkSF.put(k,null);
-        F.add(k);
+        F.offer(k);
         while(!F.isEmpty()){
             // the minimum node
             int f = F.poll();
@@ -38,6 +38,7 @@ public class networkDelayTime {
                     else if (dSF.get(w) > dw){
                         dSF.replace(w,dw);
                         bkSF.replace(w,f);
+
                         System.out.println("dSF and bkSF update: node - "+ w + ", d - "+ dSF.get(w) + ", bk - "+bkSF.get(w));
                     }
                 }
@@ -91,7 +92,9 @@ public class networkDelayTime {
 
         int aws3 = networkDelayTime(times3,2,2);
         System.out.println("aws3: "+aws3);
-
-
+//[[4,2,76],[1,3,79],[3,1,81],[4,3,30],[2,1,47],[1,5,61],[1,4,99],[3,4,68],[3,5,46],[4,1,6],[5,4,7],[5,3,44],[4,5,19],[2,3,13],[3,2,18],[1,2,0],[5,1,25],[2,5,58],[2,4,77],[5,2,74]]
+//        5
+//        3
+// Expected : 59
     }
 }

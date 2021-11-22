@@ -1,8 +1,10 @@
-package graph_dijkstra;
+package graph_shortestPath;
 
 import java.util.*;
 
-class networkDelayTime3  {
+
+
+class networkDelayTime_dfs {
     Map<Integer, Integer> dist;
     public int networkDelayTime(int[][] times, int N, int K) {
         Map<Integer, List<int[]>> graph = new HashMap();
